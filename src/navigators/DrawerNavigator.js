@@ -59,7 +59,7 @@ const DrawerNavigator = () => {
         swipeEnabled: true,
       })}>
       <Drawer.Screen name="screenC" component={ScreenC} />
-      <Drawer.Screen name="screenD" component={ScreenD} />
+      <Drawer.Screen name="screenD" component={ScreenD} initialParams={{itenName:"anushka"}}/>
       <Drawer.Screen name="Home" component={ScreenE} />
       <Drawer.Screen name="Networks" component={ScreenF} />
       <Drawer.Screen name="Post" component={ScreenG} />

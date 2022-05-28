@@ -6,7 +6,12 @@ const ScreenD = ({navigation, route}) => {
   return (
     <View>
       <Text>ScreenD</Text>
-      <TouchableOpacity onPress={() => navigation.goBack('screenC')}>
+      <TouchableOpacity
+        onPress={() =>
+          navigation.goBack('screenC')
+          // navigation.navigate('screenC',{msg:"stuti"})
+          // navigation.setParams({itemName: "I've changed my value"})
+        }>
         <Text> go back to screen c</Text>
       </TouchableOpacity>
       <Text>{route.params.itemName}</Text>
