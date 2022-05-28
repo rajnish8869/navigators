@@ -47,7 +47,7 @@ const TabNavigator = () => {
           return <Icon name={iconName} size={size} color={color} />;
         },
         tabBarIconStyle: {}, //style icon
-        tabBarBadge: 2, //count/power on icon
+        // tabBarBadge: 2, //count/power on icon
         tabBarBadgeStyle: {backgroundColor: 'red'}, //style count
         tabBarActiveTintColor: 'black', //active tab heading color
         tabBarInactiveTintColor: 'brown', //inactive tab heading color
@@ -56,11 +56,11 @@ const TabNavigator = () => {
         tabBarHideOnKeyboard:true,// hide/show bottom tab above keyborad
         unmountOnBlur:false,//keeps/removes navigation history of tabs
       })}>
-      <Tab.Screen name="Home" component={ScreenE} />
-      <Tab.Screen name="Networks" component={ScreenF} />
-      <Tab.Screen name="Post" component={ScreenG} />
-      <Tab.Screen name="Notifications" component={ScreenH} />
-      <Tab.Screen name="Jobs" component={ScreenI} />
+      <Tab.Screen name="Home" component={ScreenE} options={{tabBarBadge:""}}/>
+      <Tab.Screen name="Networks" component={ScreenF}/>
+      <Tab.Screen name="Post" component={ScreenG}/>
+      <Tab.Screen name="Notifications" component={ScreenH} options={{tabBarBadge:3}}/>
+      <Tab.Screen name="Jobs" component={ScreenI} options={{tabBarBadge:9}}/>
     </Tab.Navigator>
   );
 };

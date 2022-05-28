@@ -3,8 +3,9 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 
 import StackNavigator from './src/navigators/StackNavigator';
-import DrawerNavigator from './src/navigators/DrawerNavigator';
 import TabNavigator from './src/navigators/TabNavigator';
+import DrawerNavigator from './src/navigators/DrawerNavigator';
+import TopNavigator from './src/navigators/TopNavigator';
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
       <NavigationContainer>
         {/* <StackNavigator /> */}
         {/* <DrawerNavigator /> */}
-        <TabNavigator/>
+        {/* <TabNavigator/> */}
+        <TopNavigator />
       </NavigationContainer>
     </View>
   );
