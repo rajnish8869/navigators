@@ -18,9 +18,9 @@ const DrawerNavigator = () => {
       initialRouteName="screenC"
       screenOptions={({route}) => ({
         drawerIcon: ({focused, color, size}) => {
-          let iconName = '';
-          if (route.name === 'Home') {
-            iconName = 'home';
+          let iconName;
+          if (route.name === 'screenC') {
+            iconName = focused ? 'home' : 'people';
             color = focused ? 'blue' : 'gray';
             size = focused ? 30 : 25;
           } else if (route.name === 'Networks') {
@@ -46,17 +46,17 @@ const DrawerNavigator = () => {
         drawerActiveBackgroundColor: 'skyblue',
         drawerInactiveTintColor: 'gray',
         drawerInactiveBackgroundColor: 'lightgray',
-        drawerItemStyle:{backgroundColor:"pink"},
+        drawerItemStyle: {backgroundColor: 'pink'},
         drawerLabelStyle: {fontSize: 25},
         // drawerContentContainerStyle:
         drawerContentStyle: {borderWidth: 5, borderColor: 'red'},
-        drawerStyle: {backgroundColor:"yellow"},
+        drawerStyle: {backgroundColor: 'yellow'},
         drawerPosition: 'right',
         drawerType: 'slide',
-        drawerHideStatusBarOnOpen:true,//show/hide statusbar
-        drawerStatusBarAnimation:'fade',//background faded
-        gestureEnabled:true,
-        swipeEnabled:true,
+        drawerHideStatusBarOnOpen: true, //show/hide statusbar
+        drawerStatusBarAnimation: 'fade', //background faded
+        gestureEnabled: true,
+        swipeEnabled: true,
       })}>
       <Drawer.Screen name="screenC" component={ScreenC} />
       <Drawer.Screen name="screenD" component={ScreenD} />

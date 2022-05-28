@@ -12,9 +12,9 @@ const App = () => {
     <View style={{flex: 1}}>
       <NavigationContainer>
         {/* <StackNavigator /> */}
-        {/* <DrawerNavigator /> */}
+        <DrawerNavigator />
         {/* <TabNavigator/> */}
-        <TopNavigator />
+        {/* <TopNavigator /> */}
       </NavigationContainer>
     </View>
   );

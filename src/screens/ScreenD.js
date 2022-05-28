@@ -1,10 +1,15 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-const ScreenD = () => {
+const ScreenD = ({navigation, route}) => {
+  const {itemName} = route.params;
   return (
     <View>
       <Text>ScreenD</Text>
+      <TouchableOpacity onPress={() => navigation.goBack('screenC')}>
+        <Text> go back to screen c</Text>
+      </TouchableOpacity>
+      <Text>{route.params.itemName}</Text>
     </View>
   );
 };
